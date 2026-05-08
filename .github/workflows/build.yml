@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run unit tests
-        run: ./gradlew :composeApp:allTests --no-parallel
+        run: ./gradlew :composeApp:jvmTest
 
   desktop:
     runs-on: ubuntu-latest
@@ -105,7 +105,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Web production (Wasm)
-        run: ./gradlew :composeApp:wasmJsBrowserProductionWebpack
+        run: ./gradlew :composeApp:jsBrowserProductionRun
 
       - name: Upload Web distribution
         uses: actions/upload-artifact@v4
