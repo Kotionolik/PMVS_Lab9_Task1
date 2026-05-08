@@ -105,7 +105,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Web production (Wasm)
-        run: ./gradlew :composeApp:jsBrowserProductionRun
+        run: ./gradlew :composeApp:jsBrowserProductionWebpack
 
       - name: Upload Web distribution
         uses: actions/upload-artifact@v4
